@@ -3,7 +3,6 @@
 import os
 import sys
 import math
-os.environ['OUTPUT_PATH'] = './MinimumHeightTriangle.txt'
 
 def lowestTriangle(base, area):
     return math.ceil(float(2*area)/base)
