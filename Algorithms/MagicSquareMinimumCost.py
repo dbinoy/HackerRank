@@ -5,7 +5,7 @@ import os
 import random
 import re
 import sys
-os.environ['OUTPUT_PATH'] = './MagicSquareMinimuCost.txt'
+os.environ['OUTPUT_PATH'] = './MagicSquareMinimumCost.txt'
 # Complete the formingMagicSquare function below.
 def computeSums(s):
     n = len(s)
