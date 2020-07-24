@@ -6,25 +6,8 @@ import random
 import re
 import sys
 os.environ['OUTPUT_PATH'] = './MagicSquareMinimumCost.txt'
+
 # Complete the formingMagicSquare function below.
-def computeSums(s):
-    n = len(s)
-    rowSums = [0] * n
-    colSums = [0] * n
-    diagSums = [0] * 2
-    
-    for i in range(n):
-        for j in range(n):
-            rowSums[i] += s[i][j]
-            colSums[j] += s[i][j]
-            if i == j:
-                diagSums[0] += s[i][j]
-            if i+j == n-1:
-                diagSums[1] += s[i][j] 
-
-    return rowSums + colSums + diagSums
-
-
 def formingMagicSquare(s):
     n = [s[i][j] for i in range(3) for j in range(3)]
     p = [
@@ -42,6 +25,7 @@ def formingMagicSquare(s):
         sums.append(sum([abs(n[i]-c[i]) for i in range(9)]))
     minCost = min(sums)
     return minCost
+    
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
